@@ -25,6 +25,10 @@ class HomeController < ApplicationController
     @k = array.sample
   end
 
+  def fortune
+    array = ["路上撿到錢", "阿姨說你帥", "小狗咬咬你"]
+    @fontune = array.sample
+  end
 
   private
 

@@ -26,7 +26,11 @@ Rails.application.routes.draw do
 
   get "你好嗎", to: "home#greeting"
 
+  #運勢抽籤
+
   get "dice", to: "home#dice"
+
+  get "今日運勢", to: "home#fortune"
 
   # 查天氣
   get "(*location)天氣(*other)", to: "weather#show"
