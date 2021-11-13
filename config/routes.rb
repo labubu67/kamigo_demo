@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   get "你好嗎", to: "home#greeting"
 
+  get "dice", to: "home#dice"
+
   # 查天氣
   get "(*location)天氣(*other)", to: "weather#show"
 
