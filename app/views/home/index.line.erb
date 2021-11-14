@@ -1,18 +1,19 @@
 <%
 url = "https://i.imgur.com/WWbqH9A.png"
+kamigo_url = "https://www.kamigo.tw/assets/kamigo-c3b10dff4cdb60fa447496b22edad6c32fffde96de20262efba690892e4461e8.png"
 %>
 <%= raw(
 
   Kamiflex.json(self) do
     alt_text "hello world!"
     bubble do
-      body borderColor: "#FF0000", borderWidth: :light do
-        horizontal_box borderColor: "#00FF00", borderWidth: :light, justifyContent: "space-around" do
-          image url, flex: 0
-          image url, flex: 0
-        end
+      body **border("#FF0000"), paddingAll: "0px" do
+        image url, size: :full
+        image kamigo_url, size: :full, position: :absolute,
+          aspectRatio: "2899:1449"
       end
     end
-  end
+   end
+   
   
 )%>
