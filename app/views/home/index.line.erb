@@ -3,12 +3,15 @@
     alt_text "hello world!"
     bubble do
       body **border("#FF0000") do
-        horizontal_box **border("#0000FF") do
-          text "Text1"
-          text "Text2"
+        blue_box do
+          green_box flex: 1 do
+            text "Box1"
+          end
+          green_box flex: 2 do
+            text "Box2"
+          end
         end
       end
     end
    end
-   
 )%>
