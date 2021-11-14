@@ -5,17 +5,18 @@ kamigo_url = "https://www.kamigo.tw/assets/kamigo-c3b10dff4cdb60fa447496b22edad6
 <%= raw(
   Kamiflex.json(self) do
     alt_text "hello world!"
-    bubble do
+    bubble size: :giga do
       body **border("#FF0000"), paddingAll: "0px" do
         blue_box do
           image url, size: :full
         end
-        blue_box position: :absolute,
-          offsetStart: "-30px",
-          offsetEnd: "10px",
-          offsetTop: "10px",
-          offsetBottom: "10px" do
-          image kamigo_url, size: :full, aspectRatio: "2899:1449"
+        10.times do |i|
+          blue_box position: :absolute,
+            offsetTop: "#{i * 10}%",
+            offsetStart: "#{i * 10}%",
+            width: "10%",
+            height: "10%",
+            action: message_action("這裡是#{i + 1}")
         end
       end
     end
