@@ -1,31 +1,10 @@
-{
- "type": "text",
- "text": "快速回覆練習",
- "quickReply": {
-   "items": [
-     {
-       "type": "action",
-       "action": {
-         "type": "message",
-         "label": "Yes",
-         "text": "Yes"
-       }
-     },
-     {
-       "type": "action",
-       "action": {
-         "type": "cameraRoll",
-         "label": "Send photo"
-       }
-     },
-     {
-       "type": "action",
-       "action": {
-         "type": "camera",
-         "label": "Open camera"
-       }
-     }
-   ]
- }
-}
-
+<%= raw(
+  Kamiflex.json(self) do
+    alt_text "hello world!"
+    bubble do
+      body do
+        text "hello world!"
+      end
+    end
+  end
+)%>
