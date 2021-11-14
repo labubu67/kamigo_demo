@@ -6,11 +6,13 @@ url = "https://i.imgur.com/WWbqH9A.png"
   Kamiflex.json(self) do
     alt_text "hello world!"
     bubble do
-      body **border("#FF0000") do
-        blue_box do
-          image url, align: :end
+      body borderColor: "#FF0000", borderWidth: :light do
+        horizontal_box borderColor: "#00FF00", borderWidth: :light, justifyContent: "space-around" do
+          image url, flex: 0
+          image url, flex: 0
         end
       end
     end
-   end 
+  end
+  
 )%>
