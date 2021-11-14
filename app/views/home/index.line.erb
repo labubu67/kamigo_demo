@@ -4,17 +4,13 @@ url = "https://i.imgur.com/WWbqH9A.png"
 <%= raw(
 
   Kamiflex.json(self) do
-    alt_text "hello picture 1000!"
+    alt_text "hello world!"
     bubble do
       body **border("#FF0000") do
         blue_box do
-          green_box
-          image url, flex: 0, aspectRatio: "2:1", aspectMode: :cover
-          green_box
+          image url, size: :full
         end
       end
     end
-   end
-   
-  
+   end 
 )%>
